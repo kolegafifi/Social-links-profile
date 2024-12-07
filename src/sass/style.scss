@@ -1,0 +1,91 @@
+@use './colors' as *;
+*,
+*::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Inter', sans-serif;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: $moregrey;
+	padding: 1.6em;
+}
+a {
+	text-decoration: none;
+	color: $lessgrey;
+}
+.attribution {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, -50%);
+	font-size: 1.4rem;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+.profile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 50px;
+	max-width: 400px;
+	width: 100%;
+	background-color: $grey;
+    border-radius: 14px;
+	&__img {
+		width: 100px;
+		border-radius: 50%;
+	}
+	&__name {
+		color: white;
+		font-size: 2.6rem;
+		font-weight: 400;
+		letter-spacing: 0.5px;
+		padding: 1.8rem 0;
+	}
+	&__description {
+		color: $green;
+		font-size: 1.6rem;
+		padding-block-end: 1rem;
+	}
+	&__quote {
+		color: white;
+		font-weight: 300;
+		font-size: 1.4rem;
+		padding: 20px 0;
+	}
+	&__links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		color: white;
+		width: 100%;
+		&__link {
+			width: 100%;
+			padding: 1.6rem 0;
+			background-color: $lessgrey;
+			color: white;
+			text-align: center;
+            font-size: 1.4rem;
+			margin: 10px 0;
+            border-radius: 10px;
+		}
+	}
+}
